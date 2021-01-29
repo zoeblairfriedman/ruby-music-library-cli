@@ -1,5 +1,5 @@
-module Findable
-    module ClassMethods
+module Concerns::Findable
+    # module ClassMethods
 
     def find_by_name(name)
         self.all.find {|ele| ele.name == name}
@@ -12,6 +12,6 @@ module Findable
             self.find_by_name(name)
         end
     end
-    end
+# end
 
   end

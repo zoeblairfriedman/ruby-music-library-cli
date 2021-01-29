@@ -2,7 +2,7 @@ require 'pry'
 
 class Artist
     attr_accessor :name, :songs
-    extend Findable::ClassMethods
+    extend Concerns::Findable
 
     
     @@all = []
