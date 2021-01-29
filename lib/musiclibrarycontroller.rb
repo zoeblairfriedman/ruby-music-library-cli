@@ -88,14 +88,12 @@ end
 
 def play_song
     puts "Which song number would you like to play?"
-    list_songs
     selection = gets.chomp.to_i
     sorted_songs = Song.all.sort_by { |song| song.name }
-    # if selection > 0 && selection < sorted_songs.length + 1
+    if selection > 0 && selection < sorted_songs.length + 1
         choice = sorted_songs[selection - 1]
-        # binding.pry
-        puts "Playing #{choice.name} by #{choice.artist}"
-    # end
+        puts "Playing #{choice.name} by #{choice.artist.name}"
+    end
 end
 
 end
